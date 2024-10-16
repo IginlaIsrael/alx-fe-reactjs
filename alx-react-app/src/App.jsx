@@ -6,6 +6,7 @@ import WelcomeMessage from './components/WelcomeMessage';
 import Header from './Header';
 import MainContent from './MainContent';
 import Footer from './Footer';
+import UserProfile from './components/UserProfile';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -38,6 +39,7 @@ function App() {
         <Header />
         <MainContent />
         <Footer />
+        <UserProfile name="Israel_Iginla" age="20" bio="Student of Unilag Studying Mechanical Engineering" />
       </div>
     </>
   )
