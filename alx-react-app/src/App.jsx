@@ -39,7 +39,7 @@ function App() {
         <Header />
         <MainContent />
         <Footer />
-        <UserProfile name="Israel_Iginla" age="20" bio="Student of Unilag Studying Mechanical Engineering" />
+        <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
       </div>
     </>
   )
