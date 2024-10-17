@@ -3,5 +3,8 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview"
+  },
+  "dependencies": {
+    "react-router-dom": "^6.27.0"
   }
 }
