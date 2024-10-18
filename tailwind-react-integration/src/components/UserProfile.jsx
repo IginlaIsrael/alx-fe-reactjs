@@ -1,17 +1,20 @@
-import React from 'react';
+// src/components/UserProfile.jsx
 
-const UserProfile = ({ user }) => {
-  return (
-    <div className="max-w-xs sm:max-w-sm mx-auto p-4 sm:p-8">
-      <img 
-        src={user.profileImage} 
-        alt={`${user.name}'s profile`} 
-        className="w-24 h-24 sm:w-36 sm:h-36 mx-auto rounded-full" 
-      />
-      <h2 className="text-lg sm:text-xl text-center mt-4">{user.name}</h2>
-      <p className="text-sm sm:text-base text-center mt-2">{user.bio}</p>
-    </div>
-  );
-};
-
-export default UserProfile;
+function UserProfile() {
+    return (
+      <div className="bg-gray-100 p-4 md:p-8 max-w-xs md:max-w-sm mx-auto my-20 rounded-lg shadow-lg">
+        <img 
+          src="https://via.placeholder.com/150" 
+          alt="User" 
+          className="rounded-full w-24 h-24 md:w-36 md:h-36 mx-auto"
+        />
+        <h1 className="text-lg md:text-xl text-blue-800 my-4">John Doe</h1>
+        <p className="text-sm md:text-base text-gray-600">
+          Developer at Example Co. Loves to write code and explore new technologies.
+        </p>
+      </div>
+    );
+  }
+  
+  export default UserProfile;
+  
