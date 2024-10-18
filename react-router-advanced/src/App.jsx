@@ -1,8 +1,16 @@
+import React from 'react';
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Profile from './pages/Profile';
+import ProfileDetails from './pages/ProfileDetails';
+import ProfileSettings from './pages/ProfileSettings';
+import UserProfile from './pages/UserProfile';
 import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <nav>
         <ul>
           <li><Link to="/">Home</Link></li>
@@ -19,7 +27,7 @@ function App() {
         </Route>
         <Route path="/user/:userId" element={<UserProfile />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
