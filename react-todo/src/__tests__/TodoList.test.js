@@ -1,6 +1,7 @@
+// src/__tests__/TodoList.test.js
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
-import TodoList from '../TodoList';
+import TodoList from '../TodoList'; // Correct import of the TodoList component
 
 describe('TodoList Component', () => {
   test('renders correctly with initial todos', () => {
