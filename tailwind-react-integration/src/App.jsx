@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import React from 'react';
 import './index.css';
-
+import UserProfile from './components/UserProfile';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -34,6 +34,7 @@ function App() {
         <h1 className="text-4xl font-bold text-blue-600">
           Hello, Tailwind CSS!
         </h1>
+        <UserProfile /> 
       </div>
     </>
   )
