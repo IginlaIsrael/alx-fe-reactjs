@@ -2,6 +2,9 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { BrowserRouter } from 'react-router-dom'
+import React from 'react'
+import TodoList from './TodoList'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -28,6 +31,12 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <BrowserRouter>
+        <div>
+          <h1>My Application</h1>
+          <TodoList /> {/* Use the TodoList component here */}
+        </div>
+      </BrowserRouter>
     </>
   )
 }
