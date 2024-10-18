@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
-import Profile from './pages/Profile';
-import ProfileDetails from './pages/ProfileDetails';
-import ProfileSettings from './pages/ProfileSettings';
+import Profile from './components/Profile';            // Updated path
+import ProfileDetails from './components/ProfileDetails'; // Updated path
+import ProfileSettings from './components/ProfileSettings'; // Updated path
 import UserProfile from './pages/UserProfile';
 import ProtectedRoute from './components/ProtectedRoute';
 
