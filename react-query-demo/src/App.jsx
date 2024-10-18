@@ -2,11 +2,13 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-// import RegistrationForm from './components/RegistrationForm'
-import RegistrationFormFormik from './components/formikForm'
+import React from 'react'
+import { QueryClient, QueryClientProvider } from 'react-query'
+import PostsComponent from './components/PostsComponent'
 
 function App() {
   const [count, setCount] = useState(0)
+  const queryClient = new QueryClient();
 
   return (
     <>
@@ -18,7 +20,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>User Registration with formik</h1>
+      <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -30,7 +32,13 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <RegistrationFormFormik />
+      <QueryClientProvider client={queryClient}>
+        <div>
+          <h1>React Query Demo</h1>
+          {/* PostsComponent will handle data fetching */}
+          <PostsComponent />
+        </div>
+      </QueryClientProvider>
     </>
   )
 }
