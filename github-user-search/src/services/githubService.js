@@ -1,20 +1,31 @@
 import axios from 'axios';
 
-const fetchUserData = async (username, location, minRepos) => {
-  let query = `q=${username}`;
-  
-  // Add location filter if provided
+// Function to fetch GitHub user data with advanced search filters
+export const fetchAdvancedUserData = async (searchParams) => {
+  const { username, location, repos } = searchParams;
+
+  // Construct the search query for advanced search
+  let query = `q=${username ? username : ''}`;
+
+  // Add additional search criteria
   if (location) {
     query += `+location:${location}`;
   }
-
-  // Add minimum repositories filter if provided
-  if (minRepos) {
-    query += `+repos:>=${minRepos}`;
+  if (repos) {
+    query += `+repos:>=${repos}`;
   }
 
-  const response = await axios.get(`https://api.github.com/search/users?${query}`);
-  return response.data.items; // Adjust based on the API response structure
-};
+  // GitHub search users API URL
+  const apiUrl = `https://api.github.com/search/users?${query}`;
 
-export { fetchUserData };
+  try {
+    // Make a GET request to the GitHub API
+    const response = await axios.get(apiUrl);
+    
+    // Return the search results
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching advanced user data:', error);
+    throw error;
+  }
+};
