@@ -3,19 +3,41 @@
       "id": 1,
       "title": "Spaghetti Carbonara",
       "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-      "image": "https://via.placeholder.com/150"
+      "image": "https://via.placeholder.com/150",
+      "ingredients": [
+        "200g spaghetti",
+        "100g pancetta",
+        "2 large eggs",
+        "50g Pecorino cheese",
+        "Black pepper"
+      ],
+      "instructions": [
+        "Cook the spaghetti in salted boiling water.",
+        "Fry the pancetta in olive oil until crispy.",
+        "Whisk the eggs and cheese together.",
+        "Toss the pasta with pancetta and egg mixture.",
+        "Serve with a generous amount of black pepper."
+      ]
     },
     {
       "id": 2,
       "title": "Chicken Tikka Masala",
-      "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-      "image": "https://via.placeholder.com/150"
-    },
-    {
-      "id": 3,
-      "title": "Beef Stroganoff",
-      "summary": "A Russian dish of sautéed beef served in a rich sauce with sour cream.",
-      "image": "https://via.placeholder.com/150"
+      "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato-based gravy.",
+      "image": "https://via.placeholder.com/150",
+      "ingredients": [
+        "500g chicken breast",
+        "200ml tomato sauce",
+        "100ml heavy cream",
+        "1 tbsp garam masala",
+        "2 garlic cloves"
+      ],
+      "instructions": [
+        "Marinate the chicken in yogurt and spices for 1 hour.",
+        "Grill the chicken until fully cooked.",
+        "In a pan, sauté garlic and spices, then add tomato sauce.",
+        "Stir in the cream and add the grilled chicken.",
+        "Simmer for 10 minutes and serve with rice."
+      ]
     }
   ]
   
