@@ -1,7 +1,7 @@
 import UserInfo from './UserInfo';
 import React from 'react';
 
-function ProfilePage({ userData }) {
+function ProfilePage() {
   return <UserInfo />;
 }
 
