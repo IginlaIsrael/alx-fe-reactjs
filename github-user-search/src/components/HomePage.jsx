@@ -1,0 +1,12 @@
+import React from 'react';
+
+const HomePage = () => {
+  return (
+    <div className="container mx-auto p-4">
+      <h1 className="text-4xl font-bold">GitHub User Search</h1>
+      <p>Use the search bar above to find GitHub profiles.</p>
+    </div>
+  );
+};
+
+export default HomePage;
