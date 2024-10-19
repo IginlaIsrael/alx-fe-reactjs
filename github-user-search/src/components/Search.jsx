@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { fetchUserData } from '../services/githubService'; // Import the service function
+import { fetchUserData } from '../services/githubService'; // Adjust the import based on your structure
 
 const Search = () => {
   const [username, setUsername] = useState('');
@@ -12,7 +12,7 @@ const Search = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent the default form submission
+    e.preventDefault(); // Prevent default form submission
 
     setLoading(true);
     setError(null); // Reset error state
@@ -23,7 +23,7 @@ const Search = () => {
       setUserData(data);
     } catch (err) {
       // Ensure the error message matches exactly as required
-      setError("Looks like we can't find the user");
+      setError("Looks like we cant find the user"); // Correct error message without apostrophe
     } finally {
       setLoading(false);
     }
