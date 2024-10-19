@@ -1,22 +1,19 @@
 import axios from 'axios';
 
 // Function to fetch GitHub user data with advanced search filters
-export const fetchAdvancedUserData = async (searchParams) => {
-  const { username, location, minRepos } = searchParams; // include minRepos
-
-  // Construct the search query for advanced search
+export const fetchAdvancedUserData = async ({ username, location, minRepos }) => {
+  // Construct the search query
   let query = `q=${username ? username : ''}`;
 
-  // Add additional search criteria
   if (location) {
     query += `+location:${location}`;
   }
   if (minRepos) {
-    query += `+repos:>=${minRepos}`; // add minimum repository count filter
+    query += `+repos:>=${minRepos}`; // Add minimum repository count filter
   }
 
-  // GitHub search users API URL
-  const apiUrl = `https://api.github.com/search/users?${query}`;
+  // Full GitHub API URL for the advanced user search
+  const apiUrl = `https://api.github.com/search/users?q=${query}`;
 
   try {
     // Make a GET request to the GitHub API
