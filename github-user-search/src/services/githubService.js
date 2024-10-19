@@ -1,14 +1,20 @@
-const GITHUB_API_KEY = import.meta.env.VITE_GITHUB_API_KEY;
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 import axios from 'axios';
 
-export const fetchUserData = async (username) => {
-  try {
-    const response = await axios.get(`https://api.github.com/users/${username}`);
-    return response.data;
-  } catch (error) {
-    console.error('Error fetching user data:', error);
-    throw error; // Rethrow error to handle it in the component
+const fetchUserData = async (username, location, minRepos) => {
+  let query = `q=${username}`;
+  
+  // Add location filter if provided
+  if (location) {
+    query += `+location:${location}`;
   }
+
+  // Add minimum repositories filter if provided
+  if (minRepos) {
+    query += `+repos:>=${minRepos}`;
+  }
+
+  const response = await axios.get(`https://api.github.com/search/users?${query}`);
+  return response.data.items; // Adjust based on the API response structure
 };
 
+export { fetchUserData };
