@@ -21,22 +21,28 @@ const RecipeDetail = () => {
   }
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-4xl font-bold mb-4">{recipe.title}</h1>
-      <img src={recipe.image} alt={recipe.title} className="w-full h-60 object-cover rounded-lg mb-4" />
-      <p className="text-lg mb-4">{recipe.summary}</p>
-      <h2 className="text-2xl font-semibold mb-2">Ingredients</h2>
-      <ul className="list-disc list-inside mb-4">
-        {recipe.ingredients.map((ingredient, index) => (
-          <li key={index} className="text-lg">{ingredient}</li>
-        ))}
-      </ul>
-      <h2 className="text-2xl font-semibold mb-2">Instructions</h2>
-      <ol className="list-decimal list-inside">
-        {recipe.instructions.map((step, index) => (
-          <li key={index} className="text-lg mb-2">{step}</li>
-        ))}
-      </ol>
+    <div className="container mx-auto p-4 max-w-2xl">
+      {/* Apply shadow here */}
+      <div className="bg-white p-6 rounded-lg shadow-lg">
+        <h1 className="text-4xl font-bold mb-4">{recipe.title}</h1>
+        {/* Apply shadow to the image */}
+        <img src={recipe.image} alt={recipe.title} className="w-full h-60 object-cover rounded-lg mb-4 shadow-md" />
+        <p className="text-lg mb-4">{recipe.summary}</p>
+        
+        <h2 className="text-2xl font-semibold mb-2">Ingredients</h2>
+        <ul className="list-disc list-inside mb-4">
+          {recipe.ingredients.map((ingredient, index) => (
+            <li key={index} className="text-lg">{ingredient}</li>
+          ))}
+        </ul>
+        
+        <h2 className="text-2xl font-semibold mb-2">Instructions</h2>
+        <ol className="list-decimal list-inside">
+          {recipe.instructions.map((step, index) => (
+            <li key={index} className="text-lg mb-2">{step}</li>
+          ))}
+        </ol>
+      </div>
     </div>
   );
 };
