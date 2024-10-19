@@ -13,7 +13,7 @@ export const fetchAdvancedUserData = async ({ username, location, minRepos }) =>
   }
 
   // Full GitHub API URL for the advanced user search
-  const apiUrl = `https://api.github.com/search/users?q=${query}`;
+  const apiUrl = `https://api.github.com/search/users?q=${query}`; 
 
   try {
     // Make a GET request to the GitHub API
